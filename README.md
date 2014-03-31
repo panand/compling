@@ -15,3 +15,5 @@ We will cover:
 I assume a background in programming Python at the Level of Ling 144/244.
 
 The class will be basically lecture with some problem sets that we will discuss in class. There will be a final project/paper that will assume the bulk of the course grade.
+
+[Calendar]{https://github.com/panand/compling/blob/master/Course%20Calendar.md}
