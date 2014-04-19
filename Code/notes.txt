@@ -1,0 +1,31 @@
+What you should do:
+
+1) In Code, extract the three tar.gz directories.
+2) You will have to change some paths. In discussion.py and getDiscourse.py (both in extractionCode), you have to update the paths for utilities. Change the relevant lines to:
+
+sys.path.append('../utilities/')
+sys.path.append('../utilities/nlp')
+
+In getDiscourse.py, you also need to specify the data dir. Set it to:
+
+data_root_dir = "../../Data"
+
+3) Now, unzip the data directory. Go to http://samadhi.ucsc.edu/forums/ and download zip files. Put them in the Data/fourforums directory. Unzip them. If all goes well, you should have something like
+
+Data/
+  fourforums/
+     discussions/
+       15272.json ...
+     output/
+       1000/
+          16002.json  16030.json  16056.json  16085.json  16125.json  16162.json
+16017.json  16054.json  16061.json  16101.json  16128.json  16165.json
+       ...
+
+4) Now test it. Go back to extractionCode and type
+
+python getDiscourse.py
+
+Now, because 107.json is there but there is no parse information, this will exit with nothing. To make it interesting, on line 99, replace 107 with 1000. That will look in 1000, where we have some parse info now. To pull all the 1000 and/or 2000 files, just insert a list of your own.
+
+Let me know if things don't go right.
